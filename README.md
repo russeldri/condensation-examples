@@ -2,9 +2,10 @@
 
 Example for [condensation](https://github.com/kmcgrath/condensation)
 
-## Build All
+## Quick Start
 
-    > npm install
+Ensure [gulp](http://gulpjs.com) and [bower](http://bower.io) are  installed globally
+
     > bower install
     > gulp condensation:build
 
