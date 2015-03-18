@@ -1,6 +1,6 @@
 # condensation-examples
 
-Example for [condensation](https://github.com/kmcgrath/condensation)
+Examples for [condensation](https://github.com/kmcgrath/condensation)
 
 ## Quick Start
 
@@ -17,4 +17,4 @@ Then look in the `dist` directory to see built CloudFormation templates
 
 #### cftemplates/amzlinux.template.hbs
 Uses [particles-ec2](https://github.com/kmcgrath/particles-ec2) to
-populate a Mapping of regions to AMI for a Amazon supported build.
+populate a Mapping of regions to AMI for a Amazon supported builds.
