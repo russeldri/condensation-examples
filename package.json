@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "condensation": "^0.1.5",
+    "condensation": "kmcgrath/condensation#feature/helpers",
     "config": "^1.12.0"
   }
 }

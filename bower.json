@@ -13,6 +13,6 @@
     "tests"
  ],
  "dependencies": {
-   "particles-ec2": "kmcgrath/particles-ec2"
+   "particles-ec2": "kmcgrath/particles-ec2#feature/helpers"
  }
 }
