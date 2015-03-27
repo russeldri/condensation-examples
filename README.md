@@ -7,6 +7,7 @@ Examples for [condensation](https://github.com/kmcgrath/condensation)
 Ensure [gulp](http://gulpjs.com) and [bower](http://bower.io) are  installed globally
 
     > bower install
+    > npm install
     > gulp condensation:build
 
 Then look in the `dist` directory to see built CloudFormation templates
