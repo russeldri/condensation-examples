@@ -2,18 +2,16 @@ var config = {
   s3: [
     {
       aws: {
-        region: 'us-east-1'
+        region: 'us-east-1',
+        bucket: ''
       },
+      labels: ['dev'],
       validate: false,
       create: false
     }
   ],
   src: './',
-  dependencySrc: [
-    'bower_components'
-  ],
-  projectName: 'condensation-examples',
-  dist: 'dist',
+  dist: 'dist'
 };
 
 module.exports = config;
