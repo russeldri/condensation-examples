@@ -11,6 +11,6 @@
   "dependencies": {
     "condensation": "^0.2.0",
     "config": "^1.12.0",
-    "particles-ec2": "kmcgrath/particles-ec2#feature/remove-bower"
+    "particles-ec2": "kmcgrath/particles-ec2"
   }
 }
