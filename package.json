@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "condensation": "kmcgrath/condensation#feature/remove-bower",
+    "condensation": "^0.2.0",
     "config": "^1.12.0",
     "particles-ec2": "kmcgrath/particles-ec2#feature/remove-bower"
   }
