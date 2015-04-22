@@ -1,0 +1,12 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "Instance": {
+     "Type" : "AWS::EC2::Instance",
+     "Properties" : {
+        "ImageId": "{{{helper 'module:particles-ec2' 'amazon-region-ami' 'amzn-ami-hvm-2015.03.rc-1.x86_64-gp2' }}}",
+        "InstanceType": "t2.micro"
+     }
+    }
+  }
+}

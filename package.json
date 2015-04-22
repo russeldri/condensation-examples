@@ -1,16 +1,21 @@
 {
   "name": "condensation-examples",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": {
+    "name": "Kevin McGrath",
+    "email": "kevin.mcgrath@sungardas.com"
+  },
   "license": "ISC",
   "dependencies": {
-    "condensation": "^0.2.0",
+    "condensation": "^0.2.8",
     "config": "^1.12.0",
-    "particles-ec2": "kmcgrath/particles-ec2"
+    "particles-common-core": "^0.0.1",
+    "particles-ec2": "^0.2.1",
+    "particles-vpc": "^0.0.1"
   }
 }
