@@ -6,11 +6,10 @@ var config = {
         bucket: ''
       },
       labels: ['dev'],
-      validate: false,
+      validate: true,
       create: false
     }
   ],
-  src: './',
   dist: 'dist'
 };
 

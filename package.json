@@ -1,6 +1,6 @@
 {
   "name": "condensation-examples",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "condensation": "^0.2.0",
+    "condensation": "^0.2.7",
     "config": "^1.12.0",
-    "particles-ec2": "kmcgrath/particles-ec2"
+    "particles-common-core": "^0.0.1",
+    "particles-ec2": "^0.2.1",
+    "particles-vpc": "^0.0.1"
   }
 }
