@@ -6,10 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": {
+    "name": "Kevin McGrath",
+    "email": "kevin.mcgrath@sungardas.com"
+  },
   "license": "ISC",
   "dependencies": {
-    "condensation": "^0.2.7",
+    "condensation": "^0.2.8",
     "config": "^1.12.0",
     "particles-common-core": "^0.0.1",
     "particles-ec2": "^0.2.1",
