@@ -34,7 +34,7 @@ populate a region specific AMI without the need for a mapping.
 Demonstrates the use of front matter to create a VPC with 2 subnets.
 
 #### cftemplates/vpc\_with\_3\_subnets.template.json.hbs
-Demonstrates the use of front matter to create a VPC with 2 subnets.
+Demonstrates the use of front matter to create a VPC with 3 subnets.
 
 ### partials
 
