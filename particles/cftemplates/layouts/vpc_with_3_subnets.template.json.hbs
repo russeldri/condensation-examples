@@ -11,6 +11,9 @@ subnets:
   -
     name: Subnet3Cidr
     short: Subnet3
-    default: "10.0.1.0/24"
+    default: "10.0.2.0/24"
 ---
-{{{partial 'vpc_simple.template'}}}
+{{#layout}}
+  {{{partial 'layouts/vpc_simple.template'}}}
+{{/layout}}
+

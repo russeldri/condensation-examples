@@ -1,0 +1,13 @@
+{{#layout}}
+  {{{parameter 'module:particles-common-core' 'true_false' logicalId="CreateVpcSecurityGroup" default="true"}}}
+
+  {{#parameter logicalId="Param1"}}
+    "Description": "test",
+    "Type": "String"
+  {{/parameter}}
+
+  {{#resource logicalId="Resource1"}}
+   "Type" : "AWS::EC2::Instance",
+    "Description": "resource test"
+  {{/resource}}
+{{/layout}}

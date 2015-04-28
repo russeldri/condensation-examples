@@ -1,0 +1,15 @@
+---
+subnets:
+  -
+    name: Subnet1Cidr
+    short: Subnet1
+    default: "10.0.0.0/24"
+  -
+    name: Subnet2Cidr
+    short: Subnet2
+    default: "10.0.1.0/24"
+---
+{{#layout}}
+  {{{partial 'layouts/vpc_simple.template'}}}
+{{/layout}}
+

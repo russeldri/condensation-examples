@@ -12,10 +12,10 @@
   },
   "license": "ISC",
   "dependencies": {
-    "condensation": "^0.2.9",
+    "condensation": "sungardas/condensation#develop",
     "config": "^1.12.0",
-    "particles-common-core": "^0.0.1",
-    "particles-ec2": "^0.2.1",
-    "particles-vpc": "^0.0.1"
+    "particles-common-core": "sungardas/particles-common-core#develop",
+    "particles-ec2": "sungardas/particles-ec2#develop",
+    "particles-vpc": "sungardas/particles-vpc#develop"
   }
 }
