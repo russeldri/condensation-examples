@@ -40,7 +40,7 @@
               "Ref": "NameTag"
             }
           },
-          "TemplateURL": "{{{templateS3Url 'module:particles-vpc' 'vpc.template.json'}}}"
+          "TemplateURL": "{{{templateS3Url 'module:particles-vpc' 'simple/vpc.template.json'}}}"
         }
       },
       {{#each subnets}}
@@ -65,7 +65,7 @@
               },
               "NameTag": { "Ref": "NameTag" }
             },
-            "TemplateURL": "{{{templateS3Url 'module:particles-vpc' 'subnet.template.json'}}}"
+            "TemplateURL": "{{{templateS3Url 'module:particles-vpc' 'simple/subnet.template.json'}}}"
           },
           "DependsOn": "Vpc"
         }
