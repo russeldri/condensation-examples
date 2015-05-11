@@ -1,8 +1,7 @@
 {
   "name": "condensation-examples",
-  "version": "0.2.2",
-  "description": "",
-  "main": "index.js",
+  "version": "0.3.0",
+  "description": "Examples for condensation",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +15,6 @@
     "config": "^1.12.0",
     "particles-common-core": "^0.3.0",
     "particles-ec2": "^0.2.2",
-    "particles-vpc": "^0.3.0"
+    "particles-vpc": "^0.3.1"
   }
 }
