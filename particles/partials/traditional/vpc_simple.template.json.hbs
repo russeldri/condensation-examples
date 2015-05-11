@@ -1,12 +1,12 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
     "Parameters": {
-      {{{partial 'module:particles-common-core' 'parameter_cidr_range' name="VpcCidr" default="10.0.0.0/16"}}},
-      {{{partial 'module:particles-common-core' 'parameter_tf' name="CreateVpcSecurityGroup" default="true"}}},
-      {{{partial 'module:particles-common-core' 'parameter_tf' name="CreateInternetGateway" default="true"}}},
-      {{{partial 'module:particles-common-core' 'parameter_tf' name="OpenVpcCommunication" default="true"}}},
+      {{{parameter 'module:particles-common-core' 'cidr_range' logicalId="VpcCidr" default="10.0.0.0/16"}}},
+      {{{parameter 'module:particles-common-core' 'true_false' logicalId="CreateVpcSecurityGroup" default="true"}}},
+      {{{parameter 'module:particles-common-core' 'true_false' logicalId="CreateInternetGateway" default="true"}}},
+      {{{parameter 'module:particles-common-core' 'true_false' logicalId="OpenVpcCommunication" default="true"}}},
       {{#each subnets}}
-        {{{partial 'module:particles-common-core' 'parameter_cidr_range' name=this.name default=this.default}}},
+        {{{parameter 'module:particles-common-core' 'cidr_range' logicalId=this.name default=this.default}}},
         "{{this.short}}AvailabilityZone": {
           "Description": "Availability Zone",
           "Type": "String",
@@ -40,7 +40,7 @@
               "Ref": "NameTag"
             }
           },
-          "TemplateURL": "{{{templateS3Url 'module:particles-vpc' 'vpc.template.json'}}}"
+          "TemplateURL": "{{{templateS3Url 'module:particles-vpc' 'simple/vpc.template.json'}}}"
         }
       },
       {{#each subnets}}
@@ -65,7 +65,7 @@
               },
               "NameTag": { "Ref": "NameTag" }
             },
-            "TemplateURL": "{{{templateS3Url 'module:particles-vpc' 'subnet.template.json'}}}"
+            "TemplateURL": "{{{templateS3Url 'module:particles-vpc' 'simple/subnet.template.json'}}}"
           },
           "DependsOn": "Vpc"
         }
