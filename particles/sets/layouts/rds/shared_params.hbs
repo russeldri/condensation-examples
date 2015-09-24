@@ -1,0 +1,97 @@
+  {{
+    set "module:particles-common-core" "true_false"
+    parameterLogicalId="StorageEncrypted"
+    conditionLogicalId="StorageEncryptedCondition"
+    default="false"
+    description="[true|false] If 'true' must use instance class of db.m3.medium or larger"
+  }}
+
+  {{
+    parameter "module:particles-common-core" "base"
+    logicalId="DBInstanceClass"
+    type="String"
+    default="db.t2.micro"
+    description="For encryptioin use db.m3.medium or larger"
+  }}
+
+  {{!
+    parameter "module:particles-common-core" "base"
+    logicalId="VpcId"
+    type="AWS::EC2::VPC::Id"
+    default=""
+  }}
+
+  {{
+    parameter "module:particles-common-core" "base"
+    logicalId="VpcId"
+    type="String"
+    default=""
+    description="Leave blank to create a new VPC"
+  }}
+
+  {{! If a VpcId is not given, create a VPC with 2 subnets}}
+  {{#resource logicalId="VpcStack"}}
+    "Type": "AWS::CloudFormation::Stack",
+    "Condition": "VpcIdIsEmpty",
+    "Properties": {
+      "TemplateURL": "{{templateS3Url 'layouts/vpc_with_2_subnets.template.json'}}",
+      "Parameters": {
+        "NameTag":  {"Ref": "NameTag"}
+      }
+    }
+  {{/resource}}
+  {{condition "module:particles-common-core" 'is_empty' logicalId="VpcIdIsEmpty" parameterLogicalId="VpcId"}}
+
+  {{
+    parameter "module:particles-common-core" "base"
+    logicalId="NameTag"
+    type="String"
+    default="condensation"
+    description="Set the name tag for resources."
+    minLength="1"
+    maxLength="255"
+    allowedPattern="[\\x20-\\x7E]*"
+    constraintDescription="can contain only ASCII characters."
+  }}
+
+  {{!
+    parameter "module:particles-common-core" "base"
+    logicalId="SubnetIds"
+    type="List<AWS::EC2::Subnet::Id>"
+    default=""
+  }}
+
+  {{
+    parameter "module:particles-common-core" "base"
+    logicalId="SubnetIds"
+    type="List<String>"
+    default=""
+    description="Required if VpcId is set.  If VpcId is blank, leave this blank also. New subnets will be created"
+  }}
+
+
+  {{
+    parameter "module:particles-common-core" "base"
+    logicalId="DBSecurityGroupId"
+    type="String"
+    description="If VpcId is set then a DBSecurityGroupId can be entered here.  If blank a new group will be created"
+  }}
+  {{condition "module:particles-common-core" 'is_empty' logicalId="DBSecurityGroupIdIsEmpty" parameterLogicalId="DBSecurityGroupId"}}
+
+  {{#resource logicalId="DBSecurityGroup"}}
+    "Type": "AWS::EC2::SecurityGroup",
+    "Condition": "DBSecurityGroupIdIsEmpty",
+    "Properties": {
+      "GroupDescription": "RDS MySQL",
+      "VpcId": {"Fn::If": [
+        "VpcIdIsEmpty",
+        {"Fn::GetAtt": [ "VpcStack", "Outputs.VpcId" ] },
+        {"Ref": "VpcId"}
+      ]}
+    }
+  {{/resource}}
+
+  {{#output logicalId="DBSecurityGroupId"}}
+    "Condition": "DBSecurityGroupIdIsEmpty",
+    "Value": {"Ref": "DBSecurityGroup"}
+  {{/output}}
