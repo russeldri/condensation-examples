@@ -61,12 +61,12 @@ creates a VPC, SecurityGroup, Routes, Subnets and optional InternetGateway.
 
 All of the examples here are compiled and deployed to buckets in every AWS region
 
-* condensation-examples.us-east-1
-* condensation-examples.us-west-2
-* condensation-examples.us-west-1
-* condensation-examples.eu-west-1
-* condensation-examples.eu-central-1
-* condensation-examples.ap-southeast-1
-* condensation-examples.ap-southeast-2
-* condensation-examples.ap-northeast-1
-* condensation-examples.sa-east-1
+* [condensation-examples.us-east-1](http://condensation-examples.us-east-1.s3.amazonaws.com/)
+* [condensation-examples.us-west-2](http://condensation-examples.us-west-2.s3.amazonaws.com/)
+* [condensation-examples.us-west-1](http://condensation-examples.us-west-1.s3.amazonaws.com/)
+* [condensation-examples.eu-west-1](http://condensation-examples.eu-west-1.s3.amazonaws.com/)
+* [condensation-examples.eu-central-1](http://condensation-examples.eu-central-1.s3.amazonaws.com/)
+* [condensation-examples.ap-southeast-1](http://condensation-examples.ap-southeast-1.s3.amazonaws.com/)
+* [condensation-examples.ap-southeast-2](http://condensation-examples.ap-southeast-2.s3.amazonaws.com/)
+* [condensation-examples.ap-northeast-1](http://condensation-examples.ap-northeast-1.s3.amazonaws.com/)
+* [condensation-examples.sa-east-1](http://condensation-examples.sa-east-1.s3.amazonaws.com/)
