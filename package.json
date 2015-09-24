@@ -19,8 +19,10 @@
   },
   "license": "ISC",
   "dependencies": {
-    "condensation": "^0.4.0",
+    "condensation": "^0.4.6",
     "config": "^1.12.0",
+    "git-rev-sync": "^1.4.0",
+    "gulp": "^3.9.0",
     "particles-common-core": "^0.3.1",
     "particles-ec2": "^0.2.2",
     "particles-vpc": "^0.4.0"
